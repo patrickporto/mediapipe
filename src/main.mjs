@@ -6,12 +6,17 @@ const models = {
     selfieSegmentation: "https://storage.googleapis.com/mediapipe-tasks/image_segmenter/selfie_segmentation.tflite"
 }
 
+const isSupportedPlatform = () => {
+    return navigator.userAgent.toLowerCase().indexOf("firefox") === -1;
+}
+
 const mediaPipeApi = {
     ImageSegmenter,
     wasmFileset: null,
     models,
     tasksCanvas,
     toImageBitmap,
+    isSupportedPlatform,
 }
 
 Hooks.on('init', async () => {
