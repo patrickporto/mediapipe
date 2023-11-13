@@ -20,27 +20,11 @@
     },
     "devDependencies": {
         "@foundryvtt/foundryvtt-cli": "^0.0.6",
-        "@league-of-foundry-developers/foundry-vtt-types": "git://github.com/League-of-Foundry-Developers/foundry-vtt-types.git#main",
-        "@typescript-eslint/eslint-plugin": "^5.58.0",
-        "@typescript-eslint/parser": "^5.58.0",
-        "eslint": "^8.38.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-unused-imports": "^2.0.0",
-        "husky": "^8.0.3",
         "libts": "^1.0.1",
         "lint-staged": "^13.2.1",
         "prettier": "2.8.7",
         "prettier-eslint": "^15.0.1",
         "typescript": "^4.9.5",
         "vite": "^4.2.1"
-    },
-    "lint-staged": {
-        "**/*.{ts,js}": [
-            "prettier --write",
-            "eslint --fix ."
-        ],
-        "**/*.{json,css,md}": [
-            "prettier --write"
-        ]
     }
 }

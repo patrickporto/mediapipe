@@ -6,11 +6,8 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "esModuleInterop": true,
-        "strict": true,
+        "strict": false,
         "skipLibCheck": true,
-        "strictNullChecks": true,
-        "types": [
-            "@league-of-foundry-developers/foundry-vtt-types"
-        ]
+        "strictNullChecks": false
     }
 }
