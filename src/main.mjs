@@ -1,7 +1,6 @@
 import { FilesetResolver, ImageSegmenter } from "@mediapipe/tasks-vision";
 import { CANONICAL_NAME } from "./constants.mjs";
-
-let wasmFileset = null;
+import { tasksCanvas, toImageBitmap } from "./toImageBitmap.mjs";
 
 const models = {
     selfieSegmentation: "https://storage.googleapis.com/mediapipe-tasks/image_segmenter/selfie_segmentation.tflite"
@@ -9,12 +8,14 @@ const models = {
 
 const mediaPipeApi = {
     ImageSegmenter,
-    wasmFileset: wasmFileset,
+    wasmFileset: null,
     models,
+    tasksCanvas,
+    toImageBitmap,
 }
 
 Hooks.on('init', async () => {
-    wasmFileset = await FilesetResolver.forVisionTasks(
+    mediaPipeApi.wasmFileset = await FilesetResolver.forVisionTasks(
         "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
     );
     game.modules.get(CANONICAL_NAME).api = mediaPipeApi;
