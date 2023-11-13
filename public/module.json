@@ -6,8 +6,8 @@
         "verified": "11",
         "maximum": "11"
     },
-    "title": "mediapipe-lib",
-    "description": "A Foundry VTT module template",
+    "title": "MediaPipe",
+    "description": "MediaPipe is a ML framework for Audio/Video.",
     "languages": [
         {
             "lang": "en",
@@ -16,6 +16,7 @@
         }
     ],
     "url": "https://github.com/patrickporto/mediapipe-lib",
+    "library": true,
     "esmodules": [
         "mediapipe-lib.js"
     ]

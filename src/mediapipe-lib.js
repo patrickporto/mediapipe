@@ -6,4 +6,4 @@ window.global = window;
 
 import "/@vite/client"
 
-import("./main.ts");
+import("./main.mjs");
